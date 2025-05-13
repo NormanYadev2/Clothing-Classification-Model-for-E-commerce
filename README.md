@@ -1,56 +1,68 @@
-🧠 CNN for Image Classification using FashionMNIST
-🎯 Project Aim
-This project develops an automated product tagging system for e-commerce platforms using Convolutional Neural Networks (CNNs).
+# 🧠 CNN for Image Classification using FashionMNIST
+
+## 🎯 Project Aim
+
+This project develops an **automated product tagging system** for e-commerce platforms using **Convolutional Neural Networks (CNNs)**.  
 The model classifies product images into predefined categories, improving:
 
-📦 Inventory management
+- 📦 Inventory management  
+- 🔍 Product searchability  
+- 🤖 Recommendation systems
 
-🔍 Product searchability
+---
 
-🤖 Recommendation systems
+## 📂 Dataset Used
 
-📂 Dataset Used
-FashionMNIST
-🔗 Kaggle Link
+**FashionMNIST**  
+📎 [Kaggle Dataset](https://www.kaggle.com/datasets/zalando-research/fashionmnist/data)
 
-This dataset contains 28x28 grayscale images of fashion products from 10 categories:
+FashionMNIST consists of **28×28 grayscale images** of fashion items from **10 categories**:
 
-👕 T-shirt/top
+| Label | Category     |
+|-------|--------------|
+| 0     | T-shirt/top  |
+| 1     | Trouser      |
+| 2     | Pullover     |
+| 3     | Dress        |
+| 4     | Coat         |
+| 5     | Sandal       |
+| 6     | Shirt        |
+| 7     | Sneaker      |
+| 8     | Bag          |
+| 9     | Ankle boot   |
 
-👖 Trouser
+---
 
-🧥 Pullover
+## 🏗️ Model Architecture
 
-👗 Dress
+The CNN architecture includes:
 
-🧥 Coat
+- 🧠 `Conv2D` layer with 16 filters (kernel size = 3)  
+- ⚡ `ReLU` activation  
+- 🌀 `MaxPooling2D` (kernel size = 2)  
+- 🧱 `Flatten` layer  
+- 🎯 Fully connected `Linear` layer for 10-class classification  
 
-👡 Sandal
+---
 
-👔 Shirt
+## 🧪 Evaluation Metrics
 
-👟 Sneaker
+Performance of the model is measured using:
 
-👜 Bag
+- ✅ **Accuracy**  
+  *Overall correctness of predictions.*
 
-👢 Ankle boot
+- 🎯 **Precision (per class)**  
+  *True Positives / (True Positives + False Positives)*
 
-Each image is labeled from 0 to 9, corresponding to the category.
+- 📈 **Recall (per class)**  
+  *True Positives / (True Positives + False Negatives)*
 
-🏗️ Model Architecture
+---
 
-The model is a basic CNN with:
+## 🛠️ Tools & Libraries
 
-Conv2D layer with 16 filters
-ReLU activation
-MaxPooling2D layer
-Flatten layer
-Fully connected Linear layer
-
-
-📊 Evaluation Metrics
-
-Accuracy: Overall correctness
-Precision (per class): True positives / (True positives + False positives)
-Recall (per class): True positives / (True positives + False negatives)
-
+- `PyTorch`
+- `Torchvision`
+- `Torchmetrics`
+- `NumPy`
