@@ -1,1 +1,1 @@
-# Clothing-Classification-Model-for-E-commerce
+🧠 CNN for Image Classification using FashionMNIST
